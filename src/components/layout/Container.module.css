@@ -1,0 +1,42 @@
+.container_projects{
+    /* width: 100%; */
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 0 auto;
+    flex-wrap: wrap;
+    list-style: none;
+    text-decoration: none;
+}
+.container_navbar{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    list-style: none;
+    text-decoration: none;
+}
+/* .container{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    list-style: none;
+    text-decoration: none;
+} */
+
+.min_height{
+    min-height: 75%;
+}
+.start {
+    justify-content:  flex-start;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    flex-direction: column;
+    justify-content: flex-start;
+}
