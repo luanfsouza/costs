@@ -23,7 +23,7 @@ export default function Project() {
   const [services, setServices] = useState([])
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:5000/projects/${id}`, {
+      fetch(`http://localhost:3001/projects/${id}`, {
         method: "GET",
         headers: {
           "Content-type": "application/json",
@@ -33,6 +33,7 @@ export default function Project() {
         .then((data) =>{
           setProject(data)
           setServices(data.services)
+          console.log('ei olha eu',data)
         } )
         .catch((err) => console.log(err));
     }, 1000);
@@ -47,7 +48,7 @@ export default function Project() {
        setType('error')
        return false
     }
-    fetch(`http://localhost:5000/projects/${project.id}`,{
+    fetch(`http://localhost:3001/projects/${project._id}`,{
         method: 'PATCH',
         headers: {
             'Content-type': 'application/json'
@@ -84,7 +85,7 @@ export default function Project() {
 
     //update project
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
+    fetch(`http://localhost:3001/projects/${project._id}`, {
       method: 'PATCH',
       headers: {
         'Content-type': 'application/json'
@@ -111,7 +112,7 @@ export default function Project() {
     projectUpdated.services = servicesUpdated
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
 
-    fetch(`http://localhost:5000/projects/${projectUpdated.id}`,{
+    fetch(`http://localhost:3001/projects/${projectUpdated._id}`,{
       method: 'PATCH',
       headers: {
         'Content-type': 'application/json'
