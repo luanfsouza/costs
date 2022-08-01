@@ -20,7 +20,7 @@ function Projects() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("http://localhost:3001/projects", {
+      fetch("https://projetoheroku3.herokuapp.com/projects", {
         method: "GET",
         headers: {
           "Content-type": "application/json",
@@ -32,11 +32,11 @@ function Projects() {
           setProjects(data);
           setRemoveLoading(true);
         })
-        .catch((err) => console.log('ei olha pra min',err));
+        .catch((err) => console.log("ei olha pra min", err));
     }, 800);
   }, []);
   function atualizaBancodeDados() {
-    fetch("http://localhost:3001/projects", {
+    fetch("https://projetoheroku3.herokuapp.com/projects", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -51,7 +51,7 @@ function Projects() {
       .catch((err) => console.log(err));
   }
   function removeProject(id) {
-    fetch(`http://localhost:3001/projects/${id}`, {
+    fetch(`https://projetoheroku3.herokuapp.com/projects/${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

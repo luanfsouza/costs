@@ -23,18 +23,18 @@ export default function Project() {
   const [services, setServices] = useState([])
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:3001/projects/${id}`, {
+      fetch(`https://projetoheroku3.herokuapp.com/projects/${id}`, {
         method: "GET",
         headers: {
           "Content-type": "application/json",
         },
       })
         .then((resp) => resp.json())
-        .then((data) =>{
-          setProject(data)
-          setServices(data.services)
-          console.log('ei olha eu',data)
-        } )
+        .then((data) => {
+          setProject(data);
+          setServices(data.services);
+          console.log("ei olha eu", data);
+        })
         .catch((err) => console.log(err));
     }, 1000);
   }, [id]);
@@ -48,21 +48,21 @@ export default function Project() {
        setType('error')
        return false
     }
-    fetch(`http://localhost:3001/projects/${project._id}`,{
-        method: 'PATCH',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(project),
+    fetch(`https://projetoheroku3.herokuapp.com/projects/${project._id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(project),
     })
-    .then(resp => resp.json())
-    .then(data=>{
-        setProject(data)
-        setShowProjectForm(!showProjectform)
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProject(data);
+        setShowProjectForm(!showProjectform);
         setMessage("Projeto atualizado");
         setType("success");
-    })
-    .catch(err=>console.log(err))
+      })
+      .catch((err) => console.log(err));
   }
 
   function createService(project){
@@ -85,23 +85,23 @@ export default function Project() {
 
     //update project
 
-    fetch(`http://localhost:3001/projects/${project._id}`, {
-      method: 'PATCH',
+    fetch(`https://projetoheroku3.herokuapp.com/projects/${project._id}`, {
+      method: "PATCH",
       headers: {
-        'Content-type': 'application/json'
+        "Content-type": "application/json",
       },
-      body: JSON.stringify(project)
+      body: JSON.stringify(project),
     })
-    .then(resp => resp.json())
-    .then(data =>{
-      // exibir os serviços
-      console.log(data)
-      setMessage("Item adicionado com sucesso!");
-      setType("success");
-      setShowServiceForm(false)
-      setServices(data.services)
-    })
-    .catch(err=>console.log(err))
+      .then((resp) => resp.json())
+      .then((data) => {
+        // exibir os serviços
+        console.log(data);
+        setMessage("Item adicionado com sucesso!");
+        setType("success");
+        setShowServiceForm(false);
+        setServices(data.services);
+      })
+      .catch((err) => console.log(err));
   }
   function removeService(id, cost){
     const servicesUpdated =project.services.filter(
@@ -112,21 +112,23 @@ export default function Project() {
     projectUpdated.services = servicesUpdated
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
 
-    fetch(`http://localhost:3001/projects/${projectUpdated._id}`,{
-      method: 'PATCH',
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify(projectUpdated)
-    })
-    .then(resp=>resp.json())
-    .then(data=>{
-      console.log(data)
-      setServices(servicesUpdated)
-      setProject(projectUpdated)
-
-    })
-    .catch(err=>console.log(err))
+    fetch(
+      `https://projetoheroku3.herokuapp.com/projects/${projectUpdated._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(projectUpdated),
+      }
+    )
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+        setServices(servicesUpdated);
+        setProject(projectUpdated);
+      })
+      .catch((err) => console.log(err));
   }
   
   function toggleProjectForm() {

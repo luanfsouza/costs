@@ -9,7 +9,7 @@ function ProjectForm({ btnText, handleSubmit, projectData }) {
   const [project, setProject] = useState(projectData || {});
   // console.log(categories)
   useEffect(() => {
-    fetch("http://localhost:3001/categories", {
+    fetch("https://projetoheroku3.herokuapp.com/categories", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ function ProjectForm({ btnText, handleSubmit, projectData }) {
       .then((resp) => resp.json())
       .then((data) => {
         setCategories(data);
-        console.log(data)
+        console.log(data);
       })
       .catch((err) => console.log(err));
   }, []);

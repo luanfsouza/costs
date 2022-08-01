@@ -8,18 +8,20 @@ function NewProject() {
     project.cost = 0
     project.services = []
 
-    fetch("http://localhost:3001/projects", {
+    fetch("https://projetoheroku3.herokuapp.com/projects", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
       body: JSON.stringify(project),
     })
-    .then((resp)=>resp.json())
-    .then((data) => {
-      history('/projects', {state: {message: 'Projeto criado com sucesso'}})
-    })
-    .catch((err)=>console.log(err))
+      .then((resp) => resp.json())
+      .then((data) => {
+        history("/projects", {
+          state: { message: "Projeto criado com sucesso" },
+        });
+      })
+      .catch((err) => console.log(err));
   }
   return (
     <div className={styles.newproject_container}>
