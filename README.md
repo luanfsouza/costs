@@ -3,6 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Costs
+Link para o site: https://costs-weld.vercel.app
 
 Gerenciador de custos
 
