@@ -1,0 +1,12 @@
+.card{
+    border: 2.5px solid #71696994;
+    border-radius: 5px;
+    padding: 2em;
+    text-align: center;
+    width: 20%;
+    cursor: pointer;
+}
+.card svg {
+    font-size: 2em;
+    color:  #ffbb33;
+}

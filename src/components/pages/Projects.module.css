@@ -3,6 +3,7 @@
 }
 .project_container{
     padding: 2em;
+    min-height: 80vh;
 }
 .title_container{
     display: flex;

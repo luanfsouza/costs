@@ -16,6 +16,13 @@
     list-style: none;
     text-decoration: none;
 }
+.container_company{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 /* .container{
     width: 1200px;
     display: flex;
@@ -39,4 +46,5 @@
 .column{
     flex-direction: column;
     justify-content: flex-start;
+    min-height: 70vh;
 }

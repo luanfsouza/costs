@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     padding: 4em;
+    min-height: 80vh;
     
 }
 .home_container h1{
