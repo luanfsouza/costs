@@ -1,12 +1,23 @@
 .pro{
     min-height: 80vh;
 }
+
 .project_container{
     padding: 2em;
     min-height: 80vh;
+    /* background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
 }
 .title_container{
     display: flex;
     justify-content: space-between;
     margin-bottom: 2em;
+    text-align: center;
+}
+.title_container h1{
+  
+    font-size: 1.5rem;
 }

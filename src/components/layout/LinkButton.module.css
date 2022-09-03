@@ -8,3 +8,11 @@
 .btn:hover{
     color: #ffbb33;
 }
+@media(max-width: 500px){
+    .btn{
+        width: fit-content;
+height: fit-content;
+padding: 0.5, 0.5rem;
+text-align: center;
+    }
+}

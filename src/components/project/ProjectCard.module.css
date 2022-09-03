@@ -4,8 +4,7 @@
     border-radius: 5px;
     margin: 0.5%;
     width: 24%;
-    
-    
+    width: 300px;
 }
 .project_card h4{
     color: #ffbb33;
@@ -76,4 +75,11 @@
 .project_card_actions button:hover{
     background-color: #222;
     color: #ffbb33;
+}
+@media (max-width: 700px){
+    .project_card {
+    
+    
+    width: 100%;
+}
 }

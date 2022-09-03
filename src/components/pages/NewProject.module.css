@@ -2,10 +2,18 @@
     width: 450px;
     margin: 0 auto;
     padding: 3em;
+    background-color: red;
 }
 .newproject_container h1{
     margin-bottom: .5em;
 }
 .newproject_container p{
     color: #7b7b7b;
+}
+
+@media(max-width: 700px){
+    .newproject_container{
+    width: 100%;
+}
+     
 }
