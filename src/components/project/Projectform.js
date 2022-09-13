@@ -64,7 +64,7 @@ function ProjectForm({ btnText, handleSubmit, projectData }) {
         handleOnChange={handleCategory}
         value={project.category ? project.category.id : ""}
       />
-      <tton text={btnText} />
+      <SubmitButton text={btnText} />
     </form>
   );
 }

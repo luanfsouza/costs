@@ -2,7 +2,7 @@
     width: 450px;
     margin: 0 auto;
     padding: 3em;
-    background-color: red;
+     min-height: 80vh;
 }
 .newproject_container h1{
     margin-bottom: .5em;

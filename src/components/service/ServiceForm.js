@@ -1,7 +1,7 @@
 import styles from "../project/ProjectForm.module.css";
 import { useState } from "react";
 import Input from "../form/Input";
-import tton from "../form/SubmitButton";
+import subBtn from "../form/SubmitButton";
 
 export default function ServiceForm({ handleSubmit, btnText, projectData }) {
   const [service, setService] = useState([]);
@@ -36,7 +36,7 @@ export default function ServiceForm({ handleSubmit, btnText, projectData }) {
         placeholder="Descreva o serviço"
         handleOnChange={handleChange}
       />
-      <tton text={btnText} />
+      <subBtn text={btnText} />
     </form>
   );
 }
